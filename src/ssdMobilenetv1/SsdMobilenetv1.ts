@@ -51,7 +51,7 @@ export class SsdMobilenetv1 extends NeuralNetwork<NetParams> {
     input: TNetInput,
     options: ISsdMobilenetv1Options = {}
   ): Promise<FaceDetection[]> {
-
+    console.log("locate faces called");
     const { maxResults, minConfidence } = new SsdMobilenetv1Options(options)
 
     const netInput = await toNetInput(input)
